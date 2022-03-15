@@ -1,0 +1,54 @@
+
+<div class="container">
+  <div class="row">
+    <div class="col">
+      S.No
+    </div>
+    <div class="col">
+      Image
+    </div>
+    <div class="col">
+      Name
+    </div>
+    <div class="col">
+      Quantity
+    </div>
+    <div class="col">
+      Price
+    </div>
+    <div class="col">
+      Total Price
+    </div>
+    <div class="col">
+      Remove All
+    </div>
+    <hr>
+  </div>
+  <div class="row" *ngFor="let data of cartArr; let i = index">
+    <div class="col">
+      {{i | increment}}
+    </div>
+    <div class="col">
+      <img [src]="data.image">
+    </div>
+    <div class="col">
+      {{data.name }}
+    </div>
+    <div class="col">
+      <button type="button" class="btn btn-success" (click)="add(data)">+</button>
+      {{data.quantity}}
+      <button type="button" class="btn btn-success" (click)="minus(data)">-</button>
+    </div>
+    <div class="col">
+      {{data.price}}
+    </div>
+    <div class="col">
+      {{data.quantity * data.price}}
+    </div>
+    <div  class="col">
+      <button type="button" class="btn btn-danger" (click)="removeAll(data)">x</button>
+
+    </div>
+    <hr/>
+  </div>
+</div>

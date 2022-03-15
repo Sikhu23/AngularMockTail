@@ -1,0 +1,17 @@
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <img [src]="mockTailDetails.strDrinkThumb">
+    </div>
+    <div class="col">
+      <h5><u>Name</u> : {{mockTailDetails.strDrink}}   (<u>{{mockTailDetails.strAlcoholic}}</u>)</h5>
+      <p><u>Category</u> : {{mockTailDetails.strCategory}}</p>
+      <p><u>Ingredients</u> : {{mockTailDetails.strInstructions}}</p>
+      <p><u>Instructions</u> : {{mockTailDetails.strInstructions}}</p>
+
+      <span> Add to the Cart<button (click)="addtocart()"> + </button></span>
+
+    </div>
+
+  </div>
+</div>

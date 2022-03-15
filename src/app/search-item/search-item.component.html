@@ -1,0 +1,12 @@
+<div style="border: 1px solid black;">
+  <div *ngFor="let data of mockTailDetails" style="border: 1px solid black; margin: 10px;">
+    <div>
+      <img [src]="data.strDrinkThumb" [routerLink]="['/solomocktail',data.idDrink]">
+    </div>
+    <h5>{{data.strDrink}}</h5>
+    <p> <u>Price:-</u> 99 </p>
+    <p><u>Instructions:-    </u>{{data.strInstructions}}</p>
+
+  </div>
+
+</div>

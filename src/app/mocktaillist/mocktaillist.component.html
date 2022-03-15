@@ -1,0 +1,20 @@
+
+
+
+
+<div class="container">
+  <h5>Latest Drinks</h5>
+  <div class="row">
+    <div class="col" *ngFor="let data of mocktailarr">
+      <div class="card" style="width: 18rem; margin-top: 10px;">
+        <img [src]="data.strDrinkThumb" class="card-img-top" alt="..."  [routerLink]="['/solomocktail',data.idDrink]">
+        <div class="card-body">
+          <h5 class="card-title">{{data.strDrink}}</h5>
+          <p class="card-text">{{data.strCategory}}</p>
+          <button (click)="addtocart(data)" class="btn btn-primary" >Add To Cart</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
